@@ -57,56 +57,23 @@ Rutgers University
 
 ---
 
-# Abstract
-
-
----
-
-# Talk Outline
+# Talk outline.
 
 ## Part 1. Basics of Algebraic Geometry
-
-1. Polynomial Rings over Fields
-2. Varieties
-3. Ideals
-4. Varieties from ideals and ideals from varieties
-
 ## Part 2. Gröbner bases
-
-1. Monomial ideals
-2. Monomial orderings
-3. Dickson's Lemma
-4. Polynomial division
-5. Definition of Gröbner basis
-5. Buchberger's criterion
-6. Buchberger's algorithm
-7. Connection to Knuth-Bendix completion algorithm
-
 ## Part 3. Problems solved by Gröbner bases
-
-1. Ideal membership problem
-2. Equation solving
-3. Implicitization problem
-4. Elimination Theorem
-5. Closure Theorem
-5. Computing the intersection of ideals
-6. Computing the LCM of polynomials
-7. Computing the GCD of polynomials
-
 ## Part 4. Application to DSGRN
-
-1. Reducing the number of variables
-2. Introducing slack variables
-3. Computing Gröbner
-4. Elimination Ideal
-5. Computing CAD
-6. 4 variable case
 
 ---
 
 class: center, middle
 
 # Part 1. 
+
+1. Polynomial Rings over Fields
+2. Varieties
+3. Ideals
+4. Varieties from ideals and ideals from varieties
 
 ---
 
@@ -147,18 +114,66 @@ An *ideal* is a subring which is closed under multiplication by any polynomial i
 
 ### Algebraic-Geometric Correspondence
 
+Main idea: there is a 1-to-1 correspondence between radical ideals and algebraic varieties. 
+
 * For any variety $V$, define the ideal $\mathbf{I}(V) := \\{ f \in k[x\_1,\cdots,x\_n] : \forall x \in V, \; f(x) = 0 \\}$.
 * For any ideal $I \subset k[x\_1,\cdots,x\_n]$, define the variety $\mathbf{V}(I) := \\{ x \in k^n : \forall f \in I,\; f(x) = 0 \\}$.
+* $\mathbf{V}(I + J) = \mathbf{V}(I) \cap \mathbf{V}(J)$
+* $\mathbf{V}(I \cdot J) = \mathbf{V}(I) \cup \mathbf{V}(J)$
+* $\mathbf{V}(I \cap J) = \mathbf{V}(I) \cup \mathbf{V}(J)$
 * Nullstellensatz: For any ideal $I \subset k[x\_1,\cdots,x\_n]$, we have $ \mathbf{I}(\mathbf{V}(I)) = \sqrt{I}$.
 * Zariski Closure: For any $S \subset k^n$, we have $\bar{S} = \mathbf{V}(\mathbf{I}(S))$.
-* Main idea: there is a 1-to-1 correspondence between radical ideals and algebraic varieties. 
-
+* Product and intersection both give same variety because $\sqrt{I \cdot J} = \sqrt{I} \cap \sqrt{J} = \sqrt{I \cap J}$.
+* Prime ideals correspond to irreducible varieties.
+* Maximal ideals correspond to points.
 
 ---
 
 class: center, middle
 
+
+
 # Part 2.  Gröbner bases
+
+1. Monomial ideals
+2. Monomial orderings
+3. Dickson's Lemma
+4. Polynomial division
+5. Definition of Gröbner basis
+5. Buchberger's criterion
+6. Buchberger's algorithm
+7. Connection to Knuth-Bendix completion algorithm
+
+---
+
+class: center, middle
+
+
+
+## Part 3. Problems solved by Gröbner bases
+
+1. Ideal membership problem
+2. Equation solving
+3. Implicitization problem
+4. Elimination Theorem
+5. Closure Theorem
+5. Computing the intersection of ideals
+6. Computing the LCM of polynomials
+7. Computing the GCD of polynomials
+
+---
+
+class: center, middle
+
+## Part 4. Application to DSGRN
+
+1. Reducing the number of variables
+2. Introducing slack variables
+3. Computing Gröbner
+4. Elimination Ideal
+5. Computing CAD
+6. 4 variable case
+
 
 ---
 
